@@ -1,0 +1,15 @@
+.MainSection {
+    height: 100%;
+    width: auto;
+    order: 1;
+}
+
+@media (min-width: 766px) {
+    .MainSection {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1264px) {
+}
