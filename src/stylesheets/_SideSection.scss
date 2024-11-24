@@ -1,0 +1,73 @@
+.SideSection {
+    width: 100%;
+    order: 2;
+    border-top: 1px solid black;
+    background: rgb(170, 169, 169);
+}
+
+.NavList {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    list-style: none;
+
+    &-item {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        border-radius: 4px;
+
+        &:hover {
+            cursor: pointer;
+            background: rgb(108, 108, 108);
+        }
+
+        & > p {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 766px) {
+    .SideSection {
+        height: 100%;
+        width: auto;
+        order: 1;
+        border-top: none;
+        border-right: 1px solid black;
+    }
+
+    .NavList {
+        flex-direction: column;
+        justify-content: space-around;
+
+        &-item {
+            & + & {
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1264px) {
+    .SideSection {
+        width: 18rem;
+    }
+
+    .NavList {
+        align-items: flex-start;
+
+        &-item {
+            width: 100%;
+
+            & > p {
+                display: block;
+            }
+        }
+    }
+}
