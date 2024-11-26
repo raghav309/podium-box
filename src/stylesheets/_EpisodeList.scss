@@ -1,0 +1,58 @@
+EpisodeList {
+}
+
+.Episode {
+    padding: 1rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #c7c7c7;
+
+    &:hover {
+        cursor: pointer;
+        background: #c7c7c7;
+    }
+
+    &-thumbnail {
+        height: 4rem;
+        width: 4rem;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    & + & {
+        margin-top: 1rem;
+    }
+
+    &-detail {
+    }
+
+    &-title {
+        font-size: 1.2rem;
+    }
+
+    /* ds = date and size */
+    &-ds {
+        font-size: 0.8rem;
+    }
+
+    &-btns {
+    }
+
+    &-btn {
+        padding: 0.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        border-radius: 50%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
