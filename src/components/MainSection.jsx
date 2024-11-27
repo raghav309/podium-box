@@ -1,12 +1,9 @@
-import EpisodeList from './EpisodeList'
+import { Outlet } from 'react-router-dom'
 
 function MainSection() {
     return (
         <section className="MainSection">
-            <div className="MainTab">
-                <h1 className="MainTab-title">Trending:</h1>
-                <EpisodeList />
-            </div>
+            <Outlet />
         </section>
     )
 }

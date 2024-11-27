@@ -3,6 +3,7 @@ import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined'
 import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined'
 import WhatshotOutlinedIcon from '@mui/icons-material/WhatshotOutlined'
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined'
+import { Link } from 'react-router-dom'
 
 /*
     this is all the options avilabe in icons 
@@ -12,13 +13,23 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 function NavList() {
     return (
         <ul className="NavList">
-            <li className="NavList-item">
-                <WhatshotOutlinedIcon sx={{ fontSize: 32 }} />
-                <p>Trending</p>
+            <li>
+                <Link
+                    className="NavList-item"
+                    to="/trending"
+                >
+                    <WhatshotOutlinedIcon sx={{ fontSize: 32 }} />
+                    <p>Trending</p>
+                </Link>
             </li>
-            <li className="NavList-item">
-                <FileDownloadOutlinedIcon sx={{ fontSize: 32 }} />
-                <p>Downloads</p>
+            <li>
+                <Link
+                    className="NavList-item"
+                    to="/inbox"
+                >
+                    <FileDownloadOutlinedIcon sx={{ fontSize: 32 }} />
+                    <p>Inbox</p>
+                </Link>
             </li>
             <li className="NavList-item">
                 <SubscriptionsOutlinedIcon sx={{ fontSize: 32 }} />
