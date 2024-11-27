@@ -1,7 +1,12 @@
+import EpisodeList from './EpisodeList'
+
 function MainSection() {
     return (
         <section className="MainSection">
-            <h1>this is main</h1>
+            <div className="MainTab">
+                <h1 className="MainTab-title">Trending:</h1>
+                <EpisodeList />
+            </div>
         </section>
     )
 }

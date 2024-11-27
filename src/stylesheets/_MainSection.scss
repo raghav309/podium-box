@@ -1,7 +1,17 @@
 .MainSection {
     height: 100%;
     width: auto;
+    overflow-y: auto;
     order: 1;
+}
+
+.MainTab {
+    margin: 0 auto;
+    width: fit-content;
+
+    &-title {
+        margin: 1rem 0;
+    }
 }
 
 @media (min-width: 766px) {
