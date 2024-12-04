@@ -1,0 +1,31 @@
+.AudioPlayer {
+    padding: 0 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff;
+    border-top: 1px solid #c4c4c4;
+
+    &-progressbar {
+        width: 100%;
+        & input {
+            width: 100%;
+        }
+    }
+
+    &-btns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &-btn {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
