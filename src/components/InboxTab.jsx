@@ -1,8 +1,11 @@
+import EpisodeList from './EpisodeList'
+
 function InboxTab() {
     return (
-        <div className="MainTab">
-            <h1 className="MainTab-title">Inbox:</h1>
-        </div>
+        <>
+            <h1 className="Tab-title">Inbox:</h1>
+            <EpisodeList />
+        </>
     )
 }
 

@@ -1,11 +1,12 @@
-import EpisodeList from './EpisodeList'
+import PodcastList from './PodcastList'
+import trendingEpisodes from '../data/trendingData'
 
 function TrendingTab() {
     return (
-        <div className="MainTab">
-            <h1 className="MainTab-title">Trending:</h1>
-            <EpisodeList />
-        </div>
+        <>
+            <h1 className="Tab-title">Trending Podcasts:</h1>
+            <PodcastList dataArr={trendingEpisodes} />
+        </>
     )
 }
 
