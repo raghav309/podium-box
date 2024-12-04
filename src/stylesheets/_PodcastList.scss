@@ -1,0 +1,41 @@
+.PodcastList {
+    margin-bottom: 8rem;
+}
+
+.Podcast {
+    padding: 1rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #c7c7c7;
+    background: white;
+
+    &:hover {
+        cursor: pointer;
+        background: #c7c7c7;
+    }
+
+    & + & {
+        margin-top: 1rem;
+    }
+
+    &-thumbnail {
+        height: 4rem;
+        width: 4rem;
+
+        & > img {
+            width: 100%;
+        }
+    }
+
+    &-title {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    &-author {
+        font-size: 0.9rem;
+    }
+}
