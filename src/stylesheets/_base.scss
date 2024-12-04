@@ -11,3 +11,16 @@
 body {
     font-family: 'Roboto';
 }
+
+.rrd-link {
+    text-decoration: none;
+    color: black;
+
+    &:visited {
+        color: black;
+    }
+
+    &:hover {
+        color: black;
+    }
+}

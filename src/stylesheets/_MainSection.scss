@@ -1,16 +1,24 @@
 .MainSection {
     height: 100%;
     width: auto;
-    overflow-y: auto;
+    position: relative;
     order: 1;
+    overflow: hidden;
+    background: #f1f1f1;
 }
 
-.MainTab {
+.Tab {
     margin: 0 auto;
+    height: 100%;
     width: fit-content;
+    position: relative;
+    overflow-y: auto;
 
     &-title {
         margin: 1rem 0;
+        position: sticky;
+        top: 0;
+        background: white;
     }
 }
 

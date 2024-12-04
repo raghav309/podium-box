@@ -13,22 +13,22 @@
 
     list-style: none;
 
-    & > li {
-        width: 100%;
-    }
-
     &-item {
         padding: 0.5rem;
         display: flex;
         align-items: center;
         gap: 1rem;
         text-decoration: none;
-
+        color: black;
         border-radius: 4px;
 
         &:hover {
             cursor: pointer;
             background: #c7c7c7;
+        }
+
+        &:visited {
+            color: black;
         }
 
         & p {
@@ -66,9 +66,11 @@
     .NavList {
         align-items: flex-start;
 
-        &-item {
+        & > li {
             width: 100%;
+        }
 
+        &-item {
             & p {
                 display: block;
             }
