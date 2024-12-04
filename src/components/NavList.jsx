@@ -31,17 +31,23 @@ function NavList() {
                     <p>Inbox</p>
                 </Link>
             </li>
-            <li className="NavList-item">
-                <SubscriptionsOutlinedIcon sx={{ fontSize: 32 }} />
-                <p>Subscriptions</p>
+            <li>
+                <Link className="NavList-item">
+                    <SubscriptionsOutlinedIcon sx={{ fontSize: 32 }} />
+                    <p>Subscriptions</p>
+                </Link>
             </li>
-            <li className="NavList-item">
-                <PlaylistPlayOutlinedIcon sx={{ fontSize: 32 }} />
-                <p>Playlists</p>
+            <li>
+                <Link className="NavList-item">
+                    <PlaylistPlayOutlinedIcon sx={{ fontSize: 32 }} />
+                    <p>Playlists</p>
+                </Link>
             </li>
-            <li className="NavList-item">
-                <AccountCircleOutlinedIcon sx={{ fontSize: 32 }} />
-                <p>Account</p>
+            <li>
+                <Link className="NavList-item">
+                    <AccountCircleOutlinedIcon sx={{ fontSize: 32 }} />
+                    <p>Account</p>
+                </Link>
             </li>
         </ul>
     )
