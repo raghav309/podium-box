@@ -8,6 +8,8 @@ import {
 import Home from './components/Home'
 import TrendingTab from './components/TrendingTab'
 import InboxTab from './components/InboxTab'
+import ChannelTab from './components/ChannelTab'
+import EpisodeTab from './components/EpisodeTab'
 
 const appRouter = createBrowserRouter(
     createRoutesFromElements(
@@ -22,6 +24,14 @@ const appRouter = createBrowserRouter(
             <Route
                 path="/inbox"
                 element={<InboxTab />}
+            />
+            <Route
+                path="/channel"
+                element={<ChannelTab />}
+            />
+            <Route
+                path="/episode"
+                element={<EpisodeTab />}
             />
         </Route>
     )
