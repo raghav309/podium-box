@@ -1,9 +1,9 @@
-import PlaylistPlayOutlinedIcon from '@mui/icons-material/PlaylistPlayOutlined'
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined'
-import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined'
-import WhatshotOutlinedIcon from '@mui/icons-material/WhatshotOutlined'
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined'
-import { Link } from 'react-router-dom'
+import PlaylistPlayOutlinedIcon from '@mui/icons-material/PlaylistPlayOutlined';
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
+import WhatshotOutlinedIcon from '@mui/icons-material/WhatshotOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import NavListItem from './NavListItem';
 
 /*
     this is all the options avilabe in icons 
@@ -12,45 +12,24 @@ import { Link } from 'react-router-dom'
 
 function NavList() {
     return (
-        <ul className="NavList">
-            <li>
-                <Link
-                    className="NavList-item"
-                    to="/trending"
-                >
-                    <WhatshotOutlinedIcon sx={{ fontSize: 32 }} />
-                    <p>Trending</p>
-                </Link>
-            </li>
-            <li>
-                <Link
-                    className="NavList-item"
-                    to="/inbox"
-                >
-                    <FileDownloadOutlinedIcon sx={{ fontSize: 32 }} />
-                    <p>Inbox</p>
-                </Link>
-            </li>
-            <li>
-                <Link className="NavList-item">
-                    <SubscriptionsOutlinedIcon sx={{ fontSize: 32 }} />
-                    <p>Subscriptions</p>
-                </Link>
-            </li>
-            <li>
-                <Link className="NavList-item">
-                    <PlaylistPlayOutlinedIcon sx={{ fontSize: 32 }} />
-                    <p>Playlists</p>
-                </Link>
-            </li>
-            <li>
-                <Link className="NavList-item">
-                    <AccountCircleOutlinedIcon sx={{ fontSize: 32 }} />
-                    <p>Account</p>
-                </Link>
-            </li>
+        <ul className="NavList p-2 flex flex-row md:flex-col justify-around items-center xl:items-start list-none">
+            <NavListItem label="Trending" url="/trending">
+                <WhatshotOutlinedIcon sx={{ fontSize: 32 }} />
+            </NavListItem>
+            <NavListItem label="Indbox" url="/inbox">
+                <FileDownloadOutlinedIcon sx={{ fontSize: 32 }} />
+            </NavListItem>
+            <NavListItem label="Subscritptions" url="/subscription">
+                <SubscriptionsOutlinedIcon sx={{ fontSize: 32 }} />
+            </NavListItem>
+            <NavListItem label="Playlists" url="/playlists">
+                <PlaylistPlayOutlinedIcon sx={{ fontSize: 32 }} />
+            </NavListItem>
+            <NavListItem label="Acconut" url="/account">
+                <AccountCircleOutlinedIcon sx={{ fontSize: 32 }} />
+            </NavListItem>
         </ul>
-    )
+    );
 }
 
-export default NavList
+export default NavList;
