@@ -1,11 +1,11 @@
-import Episode from './Episode'
+import Episode from './Episode';
 
 function EpisodeList() {
     return (
-        <div className="EpisodeList">
+        <div>
             <Episode />
         </div>
-    )
+    );
 }
 
-export default EpisodeList
+export default EpisodeList;
