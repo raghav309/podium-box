@@ -1,10 +1,10 @@
 import trendingData from '../data/trendingData';
-import EpisodeList from './EpisodeList';
+import TabTitle from './TabTitle';
 
 function ChannelTab() {
     return (
         <>
-            <h1>Channel title</h1>
+            <TabTitle title="Subscriptions:" />
 
             <div className="my-4 mx-0 p-4 sticky top-0 flex gap-4 bg-white">
                 <div className="h-32 w-32">
@@ -16,8 +16,6 @@ function ChannelTab() {
                     <p>{trendingData[1].author}</p>
                 </div>
             </div>
-
-            <EpisodeList />
         </>
     );
 }

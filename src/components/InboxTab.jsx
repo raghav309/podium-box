@@ -1,12 +1,13 @@
-import EpisodeList from './EpisodeList'
+import EpisodeList from './EpisodeList';
+import TabTitle from './TabTitle';
 
 function InboxTab() {
     return (
         <>
-            <h1 className="Tab-title">Inbox:</h1>
+            <TabTitle title="Inbox:" />
             <EpisodeList />
         </>
-    )
+    );
 }
 
-export default InboxTab
+export default InboxTab;
