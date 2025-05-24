@@ -1,8 +1,4 @@
-import Podcast from './Podcast';
-import { useState, useEffect } from 'react';
-import HourglassTopIcon from '@mui/icons-material/HourglassTop';
-
-function PodcastList({ dataArr }) {
+function PodcastList({ children }) {
     /*
     const feedArr = []
     const [dataStatus, setDataStatus] = useState(false)
@@ -19,13 +15,7 @@ function PodcastList({ dataArr }) {
     })
     */
 
-    return (
-        <div className="mb-32">
-            {dataArr.map((podcastDetail) => (
-                <Podcast podcastDetail={podcastDetail} />
-            ))}
-        </div>
-    );
+    return <div className="mb-32">{children}</div>;
 }
 
 export default PodcastList;
