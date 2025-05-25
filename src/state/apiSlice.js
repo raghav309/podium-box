@@ -7,8 +7,11 @@ export const apiSlice = createApi({
         getTrending: builder.query({
             query: () => '/trending',
         }),
+        getChannelByFeedId: builder.query({
+            query: (feedId) => `/channel/byfeedid?feedid=${feedId}`,
+        }),
     }),
 });
 
 export default apiSlice;
-export const { useGetTrendingQuery } = apiSlice;
+export const { useGetTrendingQuery, useGetChannelByFeedIdQuery } = apiSlice;
