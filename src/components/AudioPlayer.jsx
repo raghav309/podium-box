@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
-
+import { useDispatch, useSelector } from 'react-redux';
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import Button from './Button';
+import { getAudioPlayerState, toggleAudio } from '../state/uiSlice';
 
 function AudioPlayer() {
     const [currentTime, setCurrentTime] = useState('00:00');
     const [duration, setDuration] = useState('00:00');
-    const [playState, setPlayState] = useState(false);
     const seekSlider = document.getElementById('seek-slider');
+    const dispatch = useDispatch();
+    const playState = useSelector(getAudioPlayerState);
 
     /*
     const showRangeProgress = (rangeInput) => {
@@ -45,7 +47,7 @@ function AudioPlayer() {
             audioElement.play();
         }
 
-        setPlayState(!playState);
+        dispatch(toggleAudio(!playState));
         setDuration(calculateTime(audioElement.duration));
     };
 
@@ -69,7 +71,9 @@ function AudioPlayer() {
                 <Button>
                     <SkipPreviousIcon />
                 </Button>
-                <Button>{playState ? <PauseIcon /> : <PlayArrowIcon />}</Button>
+                <Button onClickHandler={toggleAudioState}>
+                    {playState ? <PauseIcon /> : <PlayArrowIcon />}
+                </Button>
                 <Button>
                     <SkipNextIcon />
                 </Button>
